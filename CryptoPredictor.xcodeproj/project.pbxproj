@@ -11,8 +11,7 @@
 		CB0878F82599F4E500B0A670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0878F72599F4E500B0A670 /* SceneDelegate.swift */; };
 		CB0878FA2599F4E500B0A670 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0878F92599F4E500B0A670 /* ContentView.swift */; };
 		CB0878FC2599F4E800B0A670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0878FB2599F4E800B0A670 /* Assets.xcassets */; };
-		CB0878FF2599F4E800B0A670 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0878FE2599F4E800B0A670 /* Preview Assets.xcassets */; };
-		CB0879022599F4E800B0A670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0879002599F4E800B0A670 /* LaunchScreen.storyboard */; };
+		CB0879182599F8D200B0A670 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0879172599F8D200B0A670 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +20,8 @@
 		CB0878F72599F4E500B0A670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB0878F92599F4E500B0A670 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB0878FB2599F4E800B0A670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB0878FE2599F4E800B0A670 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CB0879012599F4E800B0A670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB0879032599F4E800B0A670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB0879172599F8D200B0A670 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,23 +54,46 @@
 		CB0878F42599F4E500B0A670 /* CryptoPredictor */ = {
 			isa = PBXGroup;
 			children = (
-				CB0878F52599F4E500B0A670 /* AppDelegate.swift */,
-				CB0878F72599F4E500B0A670 /* SceneDelegate.swift */,
-				CB0878F92599F4E500B0A670 /* ContentView.swift */,
-				CB0878FB2599F4E800B0A670 /* Assets.xcassets */,
-				CB0879002599F4E800B0A670 /* LaunchScreen.storyboard */,
-				CB0879032599F4E800B0A670 /* Info.plist */,
-				CB0878FD2599F4E800B0A670 /* Preview Content */,
+				CB08790C2599F4FC00B0A670 /* App Lifecycle */,
+				CB0879162599F8C900B0A670 /* Model */,
+				CB08790F2599F55800B0A670 /* View */,
+				CB0879112599F55F00B0A670 /* Resources */,
 			);
 			path = CryptoPredictor;
 			sourceTree = "<group>";
 		};
-		CB0878FD2599F4E800B0A670 /* Preview Content */ = {
+		CB08790C2599F4FC00B0A670 /* App Lifecycle */ = {
 			isa = PBXGroup;
 			children = (
-				CB0878FE2599F4E800B0A670 /* Preview Assets.xcassets */,
+				CB0878F52599F4E500B0A670 /* AppDelegate.swift */,
+				CB0878F72599F4E500B0A670 /* SceneDelegate.swift */,
 			);
-			path = "Preview Content";
+			path = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		CB08790F2599F55800B0A670 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB0878F92599F4E500B0A670 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB0879112599F55F00B0A670 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB0878FB2599F4E800B0A670 /* Assets.xcassets */,
+				CB0879032599F4E800B0A670 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CB0879162599F8C900B0A670 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB0879172599F8D200B0A670 /* Coin.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,8 +153,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB0879022599F4E800B0A670 /* LaunchScreen.storyboard in Resources */,
-				CB0878FF2599F4E800B0A670 /* Preview Assets.xcassets in Resources */,
 				CB0878FC2599F4E800B0A670 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,22 +166,12 @@
 			files = (
 				CB0878F62599F4E500B0A670 /* AppDelegate.swift in Sources */,
 				CB0878F82599F4E500B0A670 /* SceneDelegate.swift in Sources */,
+				CB0879182599F8D200B0A670 /* Coin.swift in Sources */,
 				CB0878FA2599F4E500B0A670 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CB0879002599F4E800B0A670 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB0879012599F4E800B0A670 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CB0879042599F4E800B0A670 /* Debug */ = {
@@ -287,7 +296,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"CryptoPredictor/Preview Content\"";
 				DEVELOPMENT_TEAM = 646XC4LJ39;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoPredictor/Info.plist;
@@ -308,7 +316,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"CryptoPredictor/Preview Content\"";
 				DEVELOPMENT_TEAM = 646XC4LJ39;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoPredictor/Info.plist;
