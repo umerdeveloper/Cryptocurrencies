@@ -10,18 +10,18 @@ import SwiftUI
 struct ContentView: View {
     
     var rates: [Coin] = [
-    
-        Coin(id: "BTC", name: "Bitcoin", price: "9733.95", icon: "bitcoin"),
-        Coin(id: "LTC", name: "Litecoin", price: "98", icon: "litecoin"),
-        Coin(id: "XIP", name: "Ripple", price: "0.90", icon: "ripple"),
-        Coin(id: "TRX", name: "Tron", price: "98", icon: "tron"),
-        Coin(id: "ETH", name: "Ethereum", price: "300.9", icon: "ethereum")
+        
+        Coin(id: "BTC", name: "Bitcoin", price: "9733.95", icon: "bitcoin", lineCoordinates: [2000, 4000, 2000, 8000, 1000]),
+        Coin(id: "LTC", name: "Litecoin", price: "98", icon: "litecoin", lineCoordinates: [1000, 4000, 5000, 8000, 8000]),
+        Coin(id: "XIP", name: "Ripple", price: "0.90", icon: "ripple", lineCoordinates: [2000, 4000, 9000, 8000, 1000]),
+        Coin(id: "TRX", name: "Tron", price: "98", icon: "tron", lineCoordinates: [8000, 7000, 5000, 1000, 4000]),
+        Coin(id: "ETH", name: "Ethereum", price: "300.9", icon: "ethereum", lineCoordinates: [2000, 4000, 1000, 8000, 5000])
     ]
     
     var myWallet: [Coin] = [
-        Coin(id: "XIP", name: "Ripple", price: "0.90", icon: "ripple"),
-        Coin(id: "TRX", name: "Tron", price: "98", icon: "tron"),
-        Coin(id: "ETH", name: "Ethereum", price: "300.9", icon: "ethereum")
+        Coin(id: "XIP", name: "Ripple", price: "0.90", icon: "ripple", lineCoordinates: [2000, 4000, 5000, 8000, 1000]),
+        Coin(id: "TRX", name: "Tron", price: "98", icon: "tron", lineCoordinates: [44, 25, 40, 90, 10]),
+        Coin(id: "ETH", name: "Ethereum", price: "300.9", icon: "ethereum", lineCoordinates: [0.7, 0.9, 0.1, 0.2, 0.5])
     ]
     
     var body: some View {
@@ -33,14 +33,23 @@ struct ContentView: View {
                     .resizable()
                     .frame(width: 120, height: 100)
                     .padding()
-                    .foregroundColor(.orange)
+                    .foregroundColor(.blue)
+                
+                LineCharController(lineCoordinates: [2, 9, 7], inline: true)
+                    .frame (
+                        minWidth: 0,
+                        maxWidth: .infinity,
+                        minHeight: 0,
+                        maxHeight: 150
+                    )
+                    .padding()
                 
                 Text("Your Crypto Balance")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.blue)
                 Text("$2,22.1")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
-                    .foregroundColor(.orange)
+                    .foregroundColor(.blue)
                 
                 
                 List {
@@ -63,7 +72,7 @@ struct ContentView: View {
                     Section(header: Text("Current Rates")) {
                         ForEach(rates) { coin in
                             
-                            NavigationLink(destination: Text("Hello")) {
+                            NavigationLink(destination: GraphCoinView(title: coin.name, lineCoordinates: coin.lineCoordinates)) {
                                 HStack {
                                     Image(coin.icon)
                                         .resizable()

@@ -12,6 +12,9 @@
 		CB0878FA2599F4E500B0A670 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0878F92599F4E500B0A670 /* ContentView.swift */; };
 		CB0878FC2599F4E800B0A670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0878FB2599F4E800B0A670 /* Assets.xcassets */; };
 		CB0879182599F8D200B0A670 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0879172599F8D200B0A670 /* Coin.swift */; };
+		CB08791D259A0C5700B0A670 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08791C259A0C5700B0A670 /* LineChart.swift */; };
+		CB087921259A0CC600B0A670 /* LineChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB087920259A0CC600B0A670 /* LineChartController.swift */; };
+		CB087924259A108B00B0A670 /* GraphCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB087923259A108B00B0A670 /* GraphCoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		CB0878FB2599F4E800B0A670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB0879032599F4E800B0A670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB0879172599F8D200B0A670 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		CB08791C259A0C5700B0A670 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		CB087920259A0CC600B0A670 /* LineChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartController.swift; sourceTree = "<group>"; };
+		CB087923259A108B00B0A670 /* GraphCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		CB0878F42599F4E500B0A670 /* CryptoPredictor */ = {
 			isa = PBXGroup;
 			children = (
+				CB08791B259A0C4F00B0A670 /* Library */,
 				CB08790C2599F4FC00B0A670 /* App Lifecycle */,
 				CB0879162599F8C900B0A670 /* Model */,
 				CB08790F2599F55800B0A670 /* View */,
@@ -75,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				CB0878F92599F4E500B0A670 /* ContentView.swift */,
+				CB087923259A108B00B0A670 /* GraphCoinView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,6 +102,15 @@
 				CB0879172599F8D200B0A670 /* Coin.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CB08791B259A0C4F00B0A670 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CB08791C259A0C5700B0A670 /* LineChart.swift */,
+				CB087920259A0CC600B0A670 /* LineChartController.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +183,11 @@
 			files = (
 				CB0878F62599F4E500B0A670 /* AppDelegate.swift in Sources */,
 				CB0878F82599F4E500B0A670 /* SceneDelegate.swift in Sources */,
+				CB087921259A0CC600B0A670 /* LineChartController.swift in Sources */,
 				CB0879182599F8D200B0A670 /* Coin.swift in Sources */,
+				CB087924259A108B00B0A670 /* GraphCoinView.swift in Sources */,
 				CB0878FA2599F4E500B0A670 /* ContentView.swift in Sources */,
+				CB08791D259A0C5700B0A670 /* LineChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

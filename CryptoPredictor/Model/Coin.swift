@@ -5,7 +5,9 @@
 //  Created by Umer Khan on 28/12/2020.
 //
 
-import Foundation
+import UIKit
+
 struct Coin: Identifiable {
     let id, name, price, icon: String
+    let lineCoordinates: [CGFloat]
 }
